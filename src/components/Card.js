@@ -203,40 +203,39 @@ class Card extends Component {
           </div>
 
           <div className="preview-card">
-          <form class="form-style-4" action="" method="post">
-<label for="field1">
-<span>EMAIL</span><input type="text" name="field1" required="true" value={this.state.email} />
+          <form className="form-style-4">
+<label >
+<span className="span">EMAIL</span><input type="text"  required="true" value={this.state.email} />
 </label>
-<label for="field2">
-<span>PHONE</span><input type="email" name="field2" required="true" value={this.state.phone}/>
+<label>
+<span  className="span">PHONE</span><input type="text" required="true" value={this.state.phone}/>
 </label>
-<label for="field3">
-<span>ADDRESS </span><input type="text" name="field3" required="true" value={this.state.houseName + " " + this.state.street}/>
+<label >
+<span  className="span">ADDRESS </span><input type="text"  required="true" value={this.state.houseName + " " + this.state.street}/>
 </label>
-<label for="field3">
-<span>&nbsp;</span><input type="text" name="field3" required="true" value={this.state.suburb + "  " + this.state.state}/>
+<label>
+<span  className="span">&nbsp;</span><input type="text" required="true" value={this.state.suburb + "  " + this.state.state}/>
 </label>
 
-<Row>
-<Col>
-<label for="field3">
-<span>POSTCODE</span><input type="text" name="field3" required="true" value={this.state.postcode}/>
+<div className="grid-container">
+<label className="item">
+<span>POSTCODE</span><input type="text" required="true" value={this.state.postcode}/>
 </label>
-</Col>
-<Col>
-<label for="field3">
-<span>COUNTRY</span><input type="text" name="field3" required="true" value={this.state.country}/>
+
+<label>
+<span>COUNTRY</span><input type="text" required="true" value={this.state.country}/>
 </label>
-</Col>
-</Row>
+
+</div>
+
+
 
 </form>
 
           </div>
 
-
-
         </div>
+
 
       </div>
     )
