@@ -200,7 +200,13 @@ class Card extends Component {
 
           <div className="preview-card-header">
             <p>{this.state.givenName} {this.state.surname}</p>
+            <div className="photo">
+              <a target="_blank" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV" alt="purvi image"/></a>
+            </div>
           </div>
+
+
 
           <div className="preview-card">
           <form className="form-style-4">
