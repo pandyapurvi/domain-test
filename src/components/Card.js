@@ -209,34 +209,38 @@ class Card extends Component {
 
 
           <div className="preview-card">
+
+          <div className="preview-content">
           <form className="form-style-4">
 <label >
 <span className="span">EMAIL</span><input type="text"  required="true" value={this.state.email} />
-</label>
+</label><hr></hr>
 <label>
 <span  className="span">PHONE</span><input type="text" required="true" value={this.state.phone}/>
-</label>
+</label><hr></hr>
 <label >
 <span  className="span">ADDRESS </span><input type="text"  required="true" value={this.state.houseName + " " + this.state.street}/>
-</label>
+</label><hr></hr>
 <label>
 <span  className="span">&nbsp;</span><input type="text" required="true" value={this.state.suburb + "  " + this.state.state}/>
-</label>
+</label><hr></hr>
 
 <div className="grid-container">
 <label className="item">
-<span>POSTCODE</span><input type="text" required="true" value={this.state.postcode}/>
-</label>
+<span>POSTCODE</span><input type="text" required="true" value={this.state.postcode} className="form-input"/>
+</label><hr></hr>
 
-<label>
-<span>COUNTRY</span><input type="text" required="true" value={this.state.country}/>
+<label >
+<span >COUNTRY</span><input type="text" required="true" value={this.state.country} className="form-input"/>
 </label>
+<hr></hr>
+</div><hr></hr>
 
-</div>
 
 
 
 </form>
+</div>
 
           </div>
 
