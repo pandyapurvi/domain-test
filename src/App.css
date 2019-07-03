@@ -35,11 +35,12 @@
 *{
   box-sizing: border-box;
 }
+
 /* Style for hCard Builder */
 .card-container {
   position:relative;
   width: 45%;
-  height:900px;
+  height: 1000px;
   float:left;
 }
 h6, h1 {
@@ -69,7 +70,7 @@ padding: 0;
 .preview-container {
   position:relative;
   width: 55%;
-  height: 900px;
+  height: 1100px;
   float:right;
   background-color:#E0E5E8;
 }
