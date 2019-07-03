@@ -110,7 +110,7 @@ class Card extends Component {
   <Row>
     <Col>
     <Form.Label className="name">GIVEN NAME</Form.Label>
-      <Form.Control onChange={this.getGivenName} />
+      <Form.Control onChange={this.getGivenName} className="builder-input" />
     </Col>
     <Col>
     <Form.Label className="name">SURNAME</Form.Label>
@@ -182,22 +182,20 @@ class Card extends Component {
 </Row>
 
 
-
-
 </Form>
 </div>
 
         </div>
 
         <div className="preview-container">
-
-        <br></br>
-          <div>
+          <div className="header">
             <h4>HCARD PREVIEW</h4>
           </div>
 
           <div className="preview-card-header">
-            <p>{this.state.givenName} {this.state.surname}</p>
+          <div className="header-container">
+            <p className="header-name">  {this.state.givenName} {this.state.surname}</p>
+          </div>
             <div className="photo">
               <a target="_blank" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV" alt="purvi image"/></a>
