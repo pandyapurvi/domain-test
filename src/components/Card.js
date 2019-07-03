@@ -103,7 +103,7 @@ class Card extends Component {
       <div className="card-container">
         <div className="card-content">
         <h1>hCard Builder</h1>
-        <h4>Personal Details</h4>
+        <h6>PERSONAL DETAILS</h6>
         <hr></hr>
 
         <Form onSubmit={this._handleSubmit}>
@@ -131,8 +131,9 @@ class Card extends Component {
 
 </Form>
 <br></br>
+<br></br><br></br>
 
-<h4>ADDRESS</h4>
+<h6>ADDRESS</h6>
 <hr></hr>
 
 <Form>
@@ -171,19 +172,16 @@ class Card extends Component {
 </Row>
 
 <br></br>
-
-<ButtonToolbar>
-
+<Row>
 <Col>
-<Button variant="secondary" size="lg" disabled>Upload Avatar</Button>
+<button className="button avatar">Upload Avatar</button>
 </Col>
 <Col>
-  <Button variant="primary" size="lg" disabled>
-    Create hCard
-  </Button>
-  </Col>
+<button className="button create">Create hCard</button>
+</Col>
+</Row>
 
-</ButtonToolbar>
+
 
 
 </Form>
