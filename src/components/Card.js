@@ -49,6 +49,7 @@ class Card extends Component {
     }
 
   getPhone(event) {
+
     this.setState({
       phone:event.target.value
       });
@@ -79,6 +80,8 @@ class Card extends Component {
     }
 
   getPostcode(event) {
+    let
+
     this.setState({
       postcode: event.target.value
         });
@@ -90,8 +93,8 @@ class Card extends Component {
           });
     }
 
-  render() {
 
+  render() {
     return (
       <div>
 
@@ -105,7 +108,7 @@ class Card extends Component {
       <Row>
         <Col>
           <Form.Label className="name">GIVEN NAME</Form.Label>
-          <Form.Control onChange={this.getGivenName} className="builder-input" />
+          <Form.Control value= {this.state.givenName} onChange={this.getGivenName} className="builder-input" />
         </Col>
         <Col>
           <Form.Label className="name">SURNAME</Form.Label>
@@ -120,7 +123,7 @@ class Card extends Component {
         </Col>
         <Col>
           <Form.Label className="name">PHONE</Form.Label>
-          <Form.Control onChange={this.getPhone} className="builder-input" />
+          <Form.Control onChange={this.getPhone} className="builder-input"  />
         </Col>
       </Row>
     </Form>
@@ -181,41 +184,44 @@ class Card extends Component {
     <div className="header-container">
       <p className="header-name">  {this.state.givenName} {this.state.surname}</p>
       </div>
+      </div>
 
-    <div className="photo">
+    <div className="avatar-container">
       <a target="_blank" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfKITLITj_C8c8HtXkDY5ltJu3xzj1kSn93BncU3aZR5yCtdlV" alt="purvi image"/></a>
       </div>
-      </div>
+
 
       <div className="preview-card">
-
-
       <div className="preview-content">
         <form className="form-style-4">
+        <div className="card-item">
         <label >
-          <span className="span">EMAIL</span><input type="text"  required="true" value={this.state.email} className="email" />
+          <span className="span">EMAIL</span><input type="text"  value={this.state.email} className="email" />
         </label><hr></hr>
         <label>
-          <span  className="span">PHONE</span><input type="text" required="true" value={this.state.phone}/>
+          <span  className="span">PHONE</span><input type="text" value={this.state.phone} />
         </label><hr></hr>
         <label >
-          <span  className="span">ADDRESS </span><input type="text"  required="true" value={this.state.houseName + " " + this.state.street}/>
+          <span  className="span-address">ADDRESS </span><input type="text"  value={this.state.houseName + " " + this.state.street}/>
         </label><hr></hr>
         <label>
-          <span  className="span">&nbsp;</span><input type="text" required="true" value={this.state.suburb + "  " + this.state.state}/>
+          <span  className="span1"></span><input type="text"  value={this.state.suburb + "  " + this.state.state}/>
         </label><hr></hr>
-
+        </div>
+          </form>
+      <form>
     <div className="grid-container">
-        <label className="item">
-          <span>POSTCODE</span><input type="text" required="true" value={this.state.postcode} className="form-input"/>
-        </label><hr></hr>
+        <label>
+          <span>POSTCODE</span><input type="text"  value={this.state.postcode} className="form-input"/>
+        </label>
 
-        <label >
-          <span >COUNTRY</span><input type="text" required="true" value={this.state.country} className="form-input"/>
-        </label><hr></hr>
-    </div><hr></hr>
-  </form>
+        <label>
+          <span className="country" >COUNTRY</span><input type="text" value={this.state.country} className="form-input"/>
+        </label>
+
+    </div>
+    </form>
   </div>
   </div>
 </div>

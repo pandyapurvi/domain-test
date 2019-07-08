@@ -1,5 +1,15 @@
+$font-family-sans-serif: 'Merriweather Sans', Helvetica, sans-serif;
+
+@mixin tablet {
+  @media screen and (min-width: $bpMinTablet), print {
+    @content;
+  }
+}
+
+
 .App {
   text-align: center;
+  padding: 0;
 }
 
 .App-logo {
@@ -34,6 +44,27 @@
 
 *{
   box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh !important;
+  font: {
+    family: $font-family-sans-serif;
+    size: 16px;
+    weight: 400;
+  }
+}
+
+input {
+  padding: 10px 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #d3d3d3;
+
+  @include tablet {
+    padding: 10px 12px;
+  }
 }
 
 /* Style for hCard Builder */
@@ -94,20 +125,20 @@ h4 {
   color: #fff;
   text-align:left;
   padding: 30px;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 .preview-card {
   position: relative;
   width: 80%;
-  height:30%;
+  height:27%;
   background-color: white;
   margin: 0 auto;
-  border-bottom: 2px solid black;
+  box-shadow: 0 2px #3f515d;
 }
 .preview-card-header {
   position:absoute;
   width: 80%;
-  height:20%;
+  height:20vh;
   background-color: #677279;
   margin: 0 auto;
 }
@@ -119,14 +150,14 @@ h4 {
   border-bottom: 1px solid black;
 }
 .form-style-4{
-	font-size: 16px;
+	/* font-size: 16px; */
   padding-top: 30px;
 }
 .form-style-4 input[type=text],
 .form-style-4 label
 {
-  font-family: "Times New Roman", Times, serif;
-	font-size: 10px;
+  font-family: "Times New Roman", serif;
+	font-size: 13px;
 	color: black;
 }
 .form-style-4 label {
@@ -135,48 +166,105 @@ h4 {
 }
 .form-style-4 label > span{
 	display: inline-block;
-	float: left;
-	width: 10%;
+	/* float: left; */
+	/* width:; */
+  margin-right: 50px;
+}
+.form-style-4 label > span.span-address{
+  margin-right: 35px;
 }
 .form-style-4 input[type=text]
 {
-	background: transparent;
-	border: none;
-	width: 70%;
-	outline: none;
+	width:30vw;
+  border: none;
 	padding: 0;
-  margin-right: 30px;
+  /* margin-right: 10px; */
   font-size: 20px;
+}
+.card-item {
+  text-align: left;
+  width: 100%;
+}
+.span1{
+  margin-left: 50px;
 }
 .grid-container {
   position:relative;
   display: flex;
   grid-template-columns: 40% 40%;
-  margin-top:0;
+  margin-right: 20px;
+  float:left;
+}
+.grid-container label > span{
+  margin-right: 25px;
+  font-size:13px;
+  font-family: "Times New Roman", serif;
+}
+.grid-container label
+{
+	color: black;
+  margin-right: 40px;
+  border-bottom: 0.1px solid #dbe0e2;
+}
+.grid-container input[type=text]
+{
+	width:13vw;
+  border: none;
+	padding: 0;
+  /* margin-right: 10px; */
+  font-size: 20px;
+  border-bottom: 0.5px solid #dbe0e2;
+  font-family: "Times New Roman", serif;
+  text-transform: capitalize;
 }
 .country {
-  float:right;
+  margin-left: -40px;
 }
 .form-input {
-  text-align: center;
-}
-.span {
-  text-align: left;
+  width: 10vw;
 }
 hr {
   margin-top: -10px;
 }
-.photo {
+label>hr {
+  margin-top: -10px;
+}
+/* .photo {
   float:right;
+} */
+.email{
+  text-transform: lowercase;
+}
+
+.avatar-container {
+  background-color: white;
+  position: absolute;
+  right: 13%;
+  top: 20%;
+  box-shadow: 0px 1px 0px 1px rgba(154, 154, 154, 0.75);
+  /* width: 120px; */
+  width: 8rem;
+  /* height: 140px; */
+  height: 9rem;
+  z-index: 50;
+
 }
 img {
+  margin-top: 15px;
+  width: 100%;
+  height: 80%;
+  padding: 0 5px;
+}
+/* img {
   border: 1px solid black;
   border-radius: 2px;
-  width: 150px;
-  float:right;
-  margin-top:40px;
+  width: 150px; */
+  /* float:right; */
+  /* margin-top:40px;
   margin-right: 20px;
-}
+  z-index: 50;
+  position: absolute;
+} */
 /* style for buttons */
 .button {
   text-align: center;
@@ -195,7 +283,10 @@ img {
 
 /* S */
 @media screen and (min-width: 500px) and (max-width: 767px) {
-  .preview-card {
+  body{
+
+  }
+  /* .preview-card {
     height:33%;
   }
   .form-style-4 input[type=text]
@@ -243,5 +334,5 @@ h1{
 }
 h4 {
   font-size: 20px;
-}
+} */
 }
